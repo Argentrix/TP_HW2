@@ -11,7 +11,10 @@ class Ingredient:
 
     @quantity.setter
     def quantity(self, value):
-        val = float(value)
+        try:
+            val = float(value)
+        except (ValueError, TypeError):
+            raise ValueError("Количество должно быть числом")
         
         if val <= 0:
             raise ValueError("Количество должно быть положительным")
