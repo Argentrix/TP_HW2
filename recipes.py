@@ -67,7 +67,7 @@ class Recipe:
             result += f"\n  - {ing}"
         return result
     
-class ShoppinList:
+class ShoppingList:
     def __init__(self):
         self._items = []
 
